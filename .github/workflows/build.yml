@@ -6,29 +6,29 @@ jobs:
     name: Build Left Side (Split)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
     with:
-      board: nice_nano_v2
-      shield: sofle_left
-      config_file: config/sofle_left.conf
+      boards: nice_nano_v2
+      shields: sofle_left
+      config: config/sofle_left.conf
 
   build_right_split:
     name: Build Right Side (Split)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
     with:
-      board: nice_nano_v2
-      shield: sofle_right
-      config_file: config/sofle_left.conf
+      boards: nice_nano_v2
+      shields: sofle_right
+      config: config/sofle_left.conf
 
   build_right_solo:
     name: Build Right Side (Solo)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
     with:
-      board: nice_nano_v2
-      shield: sofle_right
-      config_file: config/sofle_right_solo.conf
+      boards: nice_nano_v2
+      shields: sofle_right
+      config: config/sofle_right_solo.conf
 
   build_reset:
     name: Build Settings Reset
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
     with:
-      board: nice_nano_v2
-      shield: settings_reset
+      boards: nice_nano_v2
+      shields: settings_reset
