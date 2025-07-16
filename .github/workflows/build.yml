@@ -2,5 +2,33 @@ name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
+  build_left:
+    name: Build Left Side (Split)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    with:
+      board: nice_nano_v2
+      shield: sofle_left
+      config_file: config/sofle_left.conf
+
+  build_right_split:
+    name: Build Right Side (Split)
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    with:
+      board: nice_nano_v2
+      shield: sofle_right
+      config_file: config/sofle_left.conf
+
+  build_right_solo:
+    name: Build Right Side (Solo)
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    with:
+      board: nice_nano_v2
+      shield: sofle_right
+      config_file: config/sofle_right_solo.conf
+
+  build_reset:
+    name: Build Settings Reset
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.2
+    with:
+      board: nice_nano_v2
+      shield: settings_reset
