@@ -1,0 +1,9 @@
+#include "sofle.dtsi"
+
+&josefadamcik_sofle_layout {
+    transform = <&mirror_transform>;
+};
+
+&right_encoder {
+    status = "okay";
+};
